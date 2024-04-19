@@ -1,0 +1,19 @@
+version: "3"
+services:
+  # Definimos el servicio para el servidor
+  server:
+    build: ./Server
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./Volumen-Server:/app
+    command: npm run dev
+
+  # Definimos el servicio para el cliente
+  client:
+    build: ./Client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./Volumen-Client:/app
+    command: npm run dev
