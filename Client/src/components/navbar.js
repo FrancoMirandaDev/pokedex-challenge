@@ -17,6 +17,13 @@ export default function Navbar() {
       >
         Pokemon
       </Link>
+
+      <Link
+        className={`link ${pathname === "/types" ? "active" : ""}`}
+        href="/types"
+      >
+        Types
+      </Link>
     </nav>
   );
 }
